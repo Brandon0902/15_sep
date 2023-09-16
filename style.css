@@ -1,0 +1,134 @@
+body, html {
+    background-color: #000;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+}
+
+canvas {
+    position:absolute;
+    top:0;
+    left:0
+}
+
+p {
+    font-weight: bold;
+}
+
+/* Cambiar el tamaño del texto para el párrafo con la clase "green" */
+.green {
+    font-size: 60px; /* Tamaño más grande para el texto verde */
+    color: #006847;
+}
+
+/* Cambiar el tamaño del texto para el párrafo con la clase "write" */
+.write {
+    font-size: 60px; /* Tamaño aún más grande para el texto blanco */
+    color: #fff;
+}
+
+/* Cambiar el tamaño del texto para el párrafo con la clase "red" */
+.red {
+    font-size: 60px; /* Tamaño aún más grande para el texto rojo */
+    color: #CE1126;
+}
+
+.bandera {
+    display: block;
+    margin-top: 20px; /* Espacio entre los párrafos y la imagen */
+    width: 200px; /* Tamaño de la imagen */
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img {
+    max-width: 100%; }
+  
+  *, *:after, *:before {
+    box-sizing: border-box; }
+  
+  .tarjeta{
+      position: relative;
+      width: 300px;
+      height: 350px;
+    }
+  
+  .tarjeta .face{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .5s;
+  }
+  
+  .tarjeta .froont{
+    transform: perspective(600px)rotateY(0deg);
+    box-shadow: 0 5px 10px #0000;
+  }
+  
+  .tarjeta .froont img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .tarjeta .froont h2{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    line-height:45px;
+    color: white;
+    background: rgba(0, 0, 0,.4);
+    text-align: center;
+  }
+  
+  .tarjeta .atras{
+    transform: perspective(600px)rotateY(180deg);
+    background: rgba(3, 35, 54);
+    padding: 15px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0,5px, 10px #0000;
+  }
+  
+  .tarjeta .atras .enlace{
+    border-radius: solid 1px #f3f3f3;
+    height: 50px;
+    line-height: 50px;
+  }
+  
+  .tarjeta .atras .enlace a{
+    color: white;
+  }
+  
+  .tarjeta .atras h3{
+    font-size: 30px;
+    margin-top: 20px;
+    letter-spacing: 2px;
+  }
+  
+  .tarjeta .atras p{
+    letter-spacing: 1px;
+  }
+  
+  .tarjeta:hover .froont{
+    transform: perspective(600px)rotateY(180deg);
+  }
+  
+  .tarjeta:hover .atras{
+    transform: perspective(600px)rotateY(360deg);
+  }
